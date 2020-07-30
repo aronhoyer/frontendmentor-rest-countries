@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All countries &ndash; REST Countries</title>
+
+  <link rel="stylesheet" href="./styles/country-list.scss">
+</head>
+<body>
+  <header>
+    <h1>What in the world?</h1>
+    <button>Dark mode</button>
+  </header>
+
+  <nav>
+    <form action="/search" method="post">
+      <label for="search">
+        <span>Search for a country&hellip;</span>
+        <input type="search" name="query" id="search">
+      </label>
+    </form>
+
+    <!-- TODO: Region select -->
+  </nav>
+
+  <main>
+    <div id="js-countries-container"></div>
+  </main>
+
+  <script src="./js/countries/index.js"></script>
+</body>
+</html>

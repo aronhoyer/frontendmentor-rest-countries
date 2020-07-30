@@ -1,0 +1,27 @@
+$colors: (
+  light: (
+    bg: hsl(0, 0%, 98%),
+    text: hsl(200, 15%, 8%),
+    headerBg: hsl(0, 0%, 100%),
+    inputBg: hsl(0, 0%, 100%),
+    cardBg: hsl(0, 0%, 100%),
+  ),
+  dark: (
+    bg: hsl(207, 26%, 17%),
+    text: hsl(0, 0%, 100%),
+    headerBg: hsl(209, 23%, 22%),
+    inputBg: hsl(209, 23%, 22%),
+    cardBg: hsl(209, 23%, 22%),
+  ),
+);
+
+@function getThemeColor($scheme, $color) {
+  $scm: ();
+  @debug map-has-key($colors, $scheme);
+  @if map-has-key($colors, $scheme) {
+    $scm: map-get($colors, $scheme);
+  } @else {
+    @error "Invalid color scheme. Valid values are: \"#{map-keys($colors)}\"";
+  }
+  @return map-get($scm, $color);
+}

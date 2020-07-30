@@ -1,0 +1,6 @@
+{
+  "watch": ["**/*"],
+  "ignore": ["node_modules", "public/dist"],
+  "ext": ".js,.html,.scss",
+  "exec": "node main.js"
+}
